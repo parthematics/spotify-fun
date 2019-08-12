@@ -91,7 +91,7 @@ def get_most_popular_songs(access_token, limit=10, time_limit_in_sec=300):
 
     print("Total songs under {} seconds:".format(str(time_limit_in_sec)), len(songs_under_5))
 
-    largest = heapq.nsmallest(10, songs_under_5)
+    largest = heapq.nsmallest(limit, songs_under_5)
     largest = [[key, value] for value, key in largest]
 
     return largest

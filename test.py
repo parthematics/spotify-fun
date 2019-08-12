@@ -1,0 +1,1 @@
+print("Total number of songs: {}".format(count_songs))

@@ -11,9 +11,8 @@ _scope = "user-top-read user-read-recently-played user-library-read user-library
 
 # HELPER FUNCTIONS FOR AUTHORIZATION
 
-def get_auth_url(username='deeaw2ybwljjvzzv7sftosnqi', scope=_scope, client_id='e88d92c779fb4f2baf5f69a919db89ec', client_secret='e27b14511a554ea58a2b42d3b6ef5b15'):
+def get_auth_url(username, scope=_scope, client_id, client_secret, state='ilovetocodelol'):
     redirect_uri = 'https://example.com/callback/'
-    state = 'ilovetocodelol'
 
     auth_code_url = "https://accounts.spotify.com/authorize"
     auth_code_dict = {"client_id": client_id, "response_type": "code", "redirect_uri": redirect_uri, "state": state, "scope": scope, "show_dialog": "false"}
